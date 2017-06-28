@@ -1,0 +1,20 @@
+
+		var recalRequestJsonArray = [];
+	 	
+	 	$("#editbill").find("tbody>tr").each(function(){
+	 	
+	 	    var tripBillId=$(this).data("tripbillid");
+	 	    
+	 	    var $tds = $(this).find('td');
+	 	   
+	 	    
+	 	    var adjustedDistance= $tds.find('#adjustedDistance').val();
+	 	    var otherAdjustment= $tds.find('#otherAdjustments').val();
+	 	    var caculatedBilled= $tds.find('#cal_billed').text(); 
+	 	    var reasonCode=$tds.find("#reasonCode").find('option:selected').val();
+	 	    var reason=$tds.find('#reason').val();
+	 	    
+	 	    console.log("adjustedDistance--"+adjustedDistance+" // OtherAdjustment--"+otherAdjustment +"   // caculatedBilled"+caculatedBilled+"  //reasonCode "+reasonCode+"  //reason "+reason);
+		    var tripBillingRecalculateRequestData=new TripBillingRecalculateRequestData(tripBillId,adjustedDistance,otherAdjustment,reasonCode,reason);
+		    recalRequestJsonArray.push(tripBillingRecalculateRequestData);
+	 	});
