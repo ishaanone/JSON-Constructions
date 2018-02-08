@@ -1,3 +1,12 @@
+/*
+Ref: http://www.c-sharpcorner.com/UploadFile/fc34aa/sort-json-object-array-based-on-a-key-attribute-in-javascrip/
+Return value from the comparer function basically identifies the sort order of subsequent array elements. Summarized as the following:
+If ComparingFunction(a, b) is < 0, then a will be sorted to a lower index than b. Thus a will come first.
+If ComparingFunction (a, b) returns 0, then a and b will retain their respective positions. There won’t be any change in sort order.
+If ComparingFunction (a, b) is > then 0, then b will be sorted to a lower index than a. Thus b will come first.
+*/
+
+
 var array1 = ['12','1','10','19','100'];
 var array2 = ['12','10','19'];
 
