@@ -1,0 +1,18 @@
+var array1 = ['12','1','10','19','100'];
+var array2 = ['12','10','19'];
+
+
+var unique = [];
+for(var i = 0; i < array1.length; i++){
+    var found = false;
+
+    for(var j = 0; j < array2.length; j++){ // j < is missed;
+     if(array1[i] == array2[j]){
+      found = true;
+      break; 
+    }
+   }
+   if(found == false){
+   unique.push(array1[i]);
+  }
+}
