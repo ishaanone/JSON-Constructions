@@ -1,0 +1,2 @@
+data=["a","z","c","w","j"];  
+alert (data.sort( ));  
